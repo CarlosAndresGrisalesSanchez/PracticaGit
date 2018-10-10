@@ -13,18 +13,22 @@
 $palabra=$_POST['texto'];
 $arrayLetras=str_split($palabra);
 $numeroVocales=0;
+$numeroDeO=0;
 for($i=0;$i<count($arrayLetras);$i++){
 	switch($arrayLetras[$i]){
 	case "a":
 	case "e":
 	case "i":
-	case "o":
 	case "u":
+	$numeroVocales++;
+	break;
+	case "o":
+	$numeroDeO++;
 	$numeroVocales++;
 	break;
 	};
 };
-echo "Número de vocales: ".$numeroVocales;
+echo "Número de vocales: ".$numeroVocales." numero de 'o' ".$numeroDeO;
 ?>
 
 </body>
